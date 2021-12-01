@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Raleway:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/minireset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <h1>Página para testar JavaScript</h1>
+        <div class="container">
+            <h2 id="mundo">1. Escrevendo no HTML:</h2>
+            <button onclick="document.getElementById('mundo').innerHTML= 'Olá mundo!!!' ">Mudar texto</button>
+        </div>
+        <div class="container">
+            <h2>2. Mudando uma imagem:</h2>
+            <img id="simpsons" src="imagens/The-Simpsons-couch-2-2b72d66.jpg" alt="simpsons">
+            <div>
+                <button
+                    onclick="document.getElementById('simpsons').src= 'imagens/The-Simpsons-couch-2-2b72d66.jpg' ">Original</button>
+                <button
+                    onclick="document.getElementById('simpsons').src= 'imagens/The-Simpons-minimalista.jpg' ">Minimalista</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

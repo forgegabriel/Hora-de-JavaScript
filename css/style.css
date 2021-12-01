@@ -1,0 +1,59 @@
+* {
+    --font-merriweather: 'merriweather', serif;
+    --font-raleway: 'Raleway', sans-serif;
+    font-family: var(--font-merriweather);
+    font-weight: 400;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    padding: 0px 10px;
+    margin: 0px max(0px, calc(50vw - 530px));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+}
+
+h1 {
+    margin: 20px 0px;
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+    align-self: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin: 5px 0px;
+}
+
+button {
+    width: fit-content;
+    margin: 5px 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#simpsons {
+    max-width: 750px;
+    max-height: 562px;
+}
