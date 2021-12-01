@@ -40,7 +40,6 @@ h1 {
 
 h2 {
     font-size: 1.2em;
-    margin: 5px 0px;
 }
 
 button {
@@ -51,9 +50,23 @@ button {
 .container {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.p-curto p {
+    display: inline-block;
+}
+
+.p-curto button {
+    margin-left: 10px;
 }
 
 #simpsons {
     max-width: 750px;
     max-height: 562px;
+    display: block;    
+}
+
+.center {
+    align-self: center
 }
