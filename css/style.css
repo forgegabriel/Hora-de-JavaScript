@@ -2,7 +2,6 @@
     --font-merriweather: 'merriweather', serif;
     --font-raleway: 'Raleway', sans-serif;
     font-family: var(--font-merriweather);
-    font-weight: 400;
 }
 
 body {
@@ -18,10 +17,17 @@ header {
 
 main {
     padding: 0px 10px;
-    margin: 0px max(0px, calc(50vw - 530px));
+    margin: 40px max(0px, calc(50vw - 530px)) 0px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+}
+
+footer::before {
+    content: "";
+    display: block;
+    width: 100%;
+    margin-top: 80px;
 }
 
 footer {
@@ -39,18 +45,22 @@ h1 {
 }
 
 h2 {
+    font-family: var(--font-raleway);
+    font-weight: 600;
     font-size: 1.2em;
 }
 
 button {
     width: fit-content;
     margin: 5px 0px;
+    font-family: var(--font-raleway);
+    font-weight: 600;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .p-curto p {
