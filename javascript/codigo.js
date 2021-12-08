@@ -95,27 +95,40 @@ function t12p1matchString() {
 
 function t13p1mudaTrecho() {
     let $texto = document.getElementById("t13-p1-muda-trecho").innerHTML;
-    document.getElementById("t13-p1-muda-trecho").innerHTML = 
-    $texto.replace("aqui","ali");
+    document.getElementById("t13-p1-muda-trecho").innerHTML =
+        $texto.replace("aqui", "ali");
 }
 
 function t14p1p2upperCase() {
     document.getElementById("t14-p1-paragrafo").style.textTransform = "uppercase";
     let $texto2 = document.getElementById("t14-p2-paragrafo").innerHTML;
     document.getElementById("t14-p2-paragrafo").innerHTML =
-    $texto2.toUpperCase();
+        $texto2.toUpperCase();
 }
 
 function t14p1p2lowerCase() {
     document.getElementById("t14-p1-paragrafo").style.textTransform = "lowercase";
     let $texto2 = document.getElementById("t14-p2-paragrafo").innerHTML;
     document.getElementById("t14-p2-paragrafo").innerHTML =
-    $texto2.toLowerCase();
+        $texto2.toLowerCase();
 }
 
 function t15p1splitString() {
     let $texto1 = document.getElementById("t15-p1-split-string").innerHTML;
     const $array1 = $texto1.split("a");
     document.getElementById("t15-p1-split-string").innerHTML =
-    `${$array1[0]}, ${$array1[1]}, ${$array1[2]}, ${$array1[3]} e ${$array1[4]}`;
+        `${$array1[0]}, ${$array1[1]}, ${$array1[2]}, ${$array1[3]} e ${$array1[4]}`;
+}
+
+function t16p1notacao() {
+    document.getElementById("t16-p1-notacao").innerHTML =
+        `123.45e10 = ${123.45e10}<br>
+    123.45e-7 = ${123.45e-7}`;
+}
+
+function t17p1numeros() {
+    var $num = 189.3245;
+    document.getElementById("t17-p1-numeros").innerHTML =
+    `toFixed = ${$num.toFixed(4)}<br>
+    toPrecision = ${$num.toPrecision(4)}`;
 }
