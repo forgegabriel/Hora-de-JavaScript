@@ -117,7 +117,7 @@ function t15p1splitString() {
     let $texto1 = document.getElementById("t15-p1-split-string").innerHTML;
     const $array1 = $texto1.split("a");
     document.getElementById("t15-p1-split-string").innerHTML =
-        `${$array1[0]}, ${$array1[1]}, ${$array1[2]}, ${$array1[3]} e ${$array1[4]}`;
+        `${$texto1}<br> ${$array1[0]}, ${$array1[1]}, ${$array1[2]}, ${$array1[3]} e ${$array1[4]}`;
 }
 
 function t16p1notacao() {
@@ -127,8 +127,42 @@ function t16p1notacao() {
 }
 
 function t17p1numeros() {
-    var $num = 189.3245;
+    let $num = 189.3245;
     document.getElementById("t17-p1-numeros").innerHTML =
-    `toFixed = ${$num.toFixed(4)}<br>
+        `toFixed = ${$num.toFixed(4)}<br>
     toPrecision = ${$num.toPrecision(4)}`;
 }
+
+function display(idHtml, string) {
+    document.getElementById(idHtml).innerHTML = string;
+}
+
+
+function t18p1currying() {
+
+    function soma(a) {
+        return function (b) {
+            return a + b;
+        }
+    }
+
+    const soma2 = soma(2);
+
+    soma2(2);
+    soma2(3);
+    soma2(4);
+    soma2(5);
+
+    let $lugar = "t18-p1-currying";
+    let $texto = `${soma2(2)}, ${soma2(3)}, ${soma2(4)}, ${soma2(5)}`;
+
+    display($lugar, $texto);
+}
+
+// function () {
+
+//     let $lugar = "";
+//     let $texto = "";
+
+//     display($lugar, $texto);
+// }
