@@ -51,17 +51,41 @@ function t7p1escrevendoArray() {
 }
 
 function t8p1objetos() {
-    let $pessoa = {
+    const $pessoa = {
         primeiroNome: "Rafael",
         ultimoNome: "Leal",
-        altura: 1.78,
-        idade: 30,
-        nomeCompleto: function () {
+        get nomeCompleto() {
             return this.primeiroNome + " " + this.ultimoNome;
+        },
+        set nomeCompleto(string) {
+            let $nomes = string.split(" ");
+            this.primeiroNome = $nomes[0];
+            if ($nomes.length > 2) { this.ultimoNome = "" };
+            for (i = 1; i < ($nomes.length); i++) {
+                this.ultimoNome += $nomes[i] + " ";
+            }
         }
     };
-    document.getElementById("t8-p1-objetos").innerHTML =
-        `Aqui vão algumas variáveis escritas de um objeto: ${$pessoa.nomeCompleto()} tem ${$pessoa.idade} anos de idade.`;
+
+    $pessoa.nomeCompleto = "Patolomeu Fernades de Guimarães"
+
+    $pessoa.idade = 30;
+    Object.freeze($pessoa);
+    delete $pessoa.idade;
+
+    let $texto1 = "";
+    for (let x in $pessoa) {
+        $texto1 += $pessoa[x] + "<br>";
+    }
+
+    let $pessoaArray = Object.values($pessoa);
+    let $pessoaStringify = JSON.stringify($pessoa);
+
+    let $lugar = "t8-p1-objetos";
+    let $texto = `Aqui vão algumas variáveis escritas de um objeto: ${$pessoa.nomeCompleto} tem ${$pessoa.idade} anos de idade.<br>
+    <br>${$texto1}<br>${$pessoaArray}<br>${$pessoaStringify}`;
+
+    display($lugar, $texto);
 }
 
 function t9p1usandoTypeof() {
@@ -157,6 +181,28 @@ function t18p1currying() {
     let $texto = `${soma2(2)}, ${soma2(3)}, ${soma2(4)}, ${soma2(5)}`;
 
     display($lugar, $texto);
+}
+
+function t20p1eventoJS() {
+
+    let $option = document.getElementById("t20-p1-profissao").value;
+    let $fLetter = $option.slice(0, 1).toUpperCase();
+    $option = $option.replace($option[0], $fLetter);
+    
+    let $lugar = "t20-p1-onchange";
+    let $texto = "A profissão selecionada foi \"" + $option + "\".";
+
+    display($lugar, $texto);
+}
+
+function t20p2efeito($lugar) {
+
+    $lugar.style.backgroundColor = "yellow";
+}
+
+function t20p3normaliza($lugar) {
+
+    $lugar.style.backgroundColor = "initial";
 }
 
 // function () {

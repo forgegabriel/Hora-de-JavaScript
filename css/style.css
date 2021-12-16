@@ -63,6 +63,10 @@ button {
     gap: 5px;
 }
 
+.container select {
+    flex: none;
+}
+
 .p-curto p {
     display: inline-block;
 }
@@ -74,9 +78,28 @@ button {
 #simpsons {
     max-width: 750px;
     max-height: 562px;
-    display: block;    
+    display: block;
 }
 
 .center {
     align-self: center
+}
+
+.vertical-space {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.vertical-space {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.horizontal-space {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.space {
+    margin: 10px;
 }

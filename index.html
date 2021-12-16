@@ -15,7 +15,7 @@
     <script src="javascript/codigo.js"></script>
 </head>
 
-<body>
+<body onload="t20p1eventoJS()">
     <header>
 
     </header>
@@ -38,11 +38,11 @@
         </div>
         <div class="container p-curto">
             <h2>3. Diferentes outputs</h2>
-            <div>
+            <div class="horizontal-space">
                 <p id="t3p1-muda-paragrafo">Esse parágrafo recebe "3 + 4" usando "innerHTML".</p>
-                <button onclick=t3p1paragrafoInnerHtml()>Aperte</button><br>
+                <button onclick="t3p1paragrafoInnerHtml()">Aperte</button><br>
             </div>
-            <div>
+            <div class="horizontal-space">
                 <p>Essa linha recebe "3 + 4" usando "write()": </p>
                 <script>
                     document.write(3 + 4);
@@ -50,24 +50,24 @@
                 <button>Botão inútil</button>
                 <br>
             </div>
-            <div>
+            <div class="horizontal-space">
                 <p>Essa página recebe "3 + 4" usando "alert()".</p><button onclick="t3p3alerta()">Aperte</button><br>
             </div>
-            <div>
+            <div class="horizontal-space">
                 <p>O console dessa página recebe "3 + 4" usando "console.log()".</p>
-                <button onclick=t3p4consoleLog()>Aperte</button><br>
+                <button onclick="t3p4consoleLog()">Aperte</button><br>
             </div>
-            <div>
+            <div class="horizontal-space">
                 <p>Esse página pode ser impressa usando "window.print()</p>
-                <button onclick=t3p5print()>Aperte</button><br>
+                <button onclick="t3p5print()">Aperte</button><br>
             </div>
         </div>
         <div class="container">
             <h2>4. Somando strings</h2>
             <p id="t4p1-somando-strings">Somando strings</p>
-            <button onclick=t4p1somandoStrings()>Aperte</button>
+            <button onclick="t4p1somandoStrings()">Aperte</button>
             <p id="t4p2-somando-snn">Somando strings e números</p>
-            <button onclick=t4p2somandoSnn()>Aperte</button>
+            <button onclick="t4p2somandoSnn()">Aperte</button>
         </div>
         <div class="container">
             <h2>5. Mostrando o resultado de uma soma</h2>
@@ -112,7 +112,7 @@
         <div class="container">
             <h2>13. Mudando trechos do texto</h2>
             <p id="t13-p1-muda-trecho">Muda isso "aqui"</p>
-            <button onclick=t13p1mudaTrecho()>Mudar</button>
+            <button onclick="t13p1mudaTrecho()">Mudar</button>
         </div>
         <div class="container">
             <h2>14. Converter letra para maiúscula</h2>
@@ -142,6 +142,64 @@
             <h2>18. Currying</h2>
             <p id="t18-p1-currying"></p>
             <script>t18p1currying()</script>
+        </div>
+        <div class="container">
+            <h2>19. Contador</h2>
+            <p id="t19-p1-contador">Número:</p>
+            <script>
+
+                var $t19p1contador = { num: 10 };
+
+                Object.defineProperty($t19p1contador, "resetar", {
+                    get: function () { this.num = 0; }
+                });
+                Object.defineProperty($t19p1contador, "adicionar", {
+                    get: function () { this.num++; }
+                });
+                Object.defineProperty($t19p1contador, "reduzir", {
+                    get: function () { this.num--; }
+                });
+
+                var $lugar = "t19-p1-contador";
+                var $texto = document.getElementById($lugar).innerHTML;
+                display($lugar, $texto + " " + $t19p1contador.num);
+
+                function t19p1resetar() {
+
+                    $t19p1contador.resetar;
+                    display($lugar, $texto + " " + $t19p1contador.num);
+                }
+
+                function t19p2adiciona1() {
+
+                    $t19p1contador.adicionar;
+                    display($lugar, $texto + " " + $t19p1contador.num);
+                }
+
+                function t19p3reduz1() {
+
+                    $t19p1contador.reduzir;
+                    display($lugar, $texto + " " + $t19p1contador.num);
+                }
+
+            </script>
+            <div>
+                <button onclick="t19p1resetar()">Resetar</button>
+                <button onclick="t19p2adiciona1()">Adiciona 1</button>
+                <button onclick="t19p3reduz1()">Reduz 1</button>
+            </div>
+        </div>
+        <div class="container" onmouseover="t20p2efeito(this)" onmouseout="t20p3normaliza(this)">
+            <h2 onmouseout="this.style.fontFamily='sans-serif'">20. Diferentes eventos de Javascript</h2>
+            <div>
+                <select class="vertical-space" name="profissao" id="t20-p1-profissao" onchange="t20p1eventoJS()">
+                    <option value="bombeiro">Bombeiro</option>
+                    <option value="policial">Policial</option>
+                    <option value="carteiro">Carteiro</option>
+                    <option value="medico">Médico</option>
+                </select>
+            </div>
+            <p id="t20-p1-onchange" onmouseover="t20p2efeito(this)"></p>
         </div>
     </main>
 
