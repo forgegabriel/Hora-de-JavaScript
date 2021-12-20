@@ -201,6 +201,34 @@
             </div>
             <p id="t20-p1-onchange" onmouseover="t20p2efeito(this)"></p>
         </div>
+        <div class="container">
+            <h2>21. Locate em strings</h2>
+            <p id="t21-p0-locate">Exemplo: tente achar a posição da palavra "achar".</p>
+            <p id="t21-p1-indexof"></p>
+            <p id="t21-p2-includes"></p>
+            <p id="t21-p3-startswith"></p>
+            <p id="t21-p4-endswith"></p>
+            <script>t21p1locate(); t21p2locate(); t21p3locate(); t21p4locate();</script>
+        </div>
+        <div class="container">
+            <h2>22. Array em loop</h2>
+            <p id="t22-p1-array-for-each"></p>
+            <script>
+
+                $lugar = "t22-p1-array-for-each";
+                const $paises = ["Argentina", "Uruguai", "Brasil", "Chile", "Paraguai"];
+
+                $texto = "<ol class=\"estilo-lista\">";
+                $paises.forEach(constroiLista);
+                $texto += "</ol>"
+
+                display($lugar, $texto);
+
+                function constroiLista(string) {
+                    $texto += "<li>" + string + "</li>";
+                }
+            </script>
+        </div>
     </main>
 
     <footer>

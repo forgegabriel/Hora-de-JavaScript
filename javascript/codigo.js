@@ -114,7 +114,8 @@ function t11p1indexOfString() {
 function t12p1matchString() {
     let $str = "The rain in SPAIN stays mainly in the plain";
     let $res = $str.match(/ain/g);
-    document.getElementById("t12-p1-match-string").innerHTML = $res;
+    document.getElementById("t12-p1-match-string").innerHTML =
+        $str + "<br>" + $res;
 }
 
 function t13p1mudaTrecho() {
@@ -188,7 +189,7 @@ function t20p1eventoJS() {
     let $option = document.getElementById("t20-p1-profissao").value;
     let $fLetter = $option.slice(0, 1).toUpperCase();
     $option = $option.replace($option[0], $fLetter);
-    
+
     let $lugar = "t20-p1-onchange";
     let $texto = "A profissão selecionada foi \"" + $option + "\".";
 
@@ -203,6 +204,46 @@ function t20p2efeito($lugar) {
 function t20p3normaliza($lugar) {
 
     $lugar.style.backgroundColor = "initial";
+}
+
+function t21p1locate() {
+
+    let $lugar = "t21-p0-locate";
+    let $texto1 = document.getElementById($lugar).innerHTML;
+    let $texto = 'A posição da palavra "achar" da frase exemplo é: ' + $texto1.indexOf("achar");
+
+    $lugar = "t21-p1-indexof";
+    display($lugar, $texto);
+}
+
+function t21p2locate() {
+
+    let $lugar = "t21-p0-locate";
+    let $texto1 = document.getElementById($lugar).innerHTML;
+    let $texto = 'É verdade que a frase exemplo tem a plavra "tente": ' + $texto1.includes("tente");
+
+    $lugar = "t21-p2-includes";
+    display($lugar, $texto);
+}
+
+function t21p3locate() {
+
+    let $lugar = "t21-p0-locate";
+    let $texto1 = document.getElementById($lugar).innerHTML;
+    let $texto = 'É verdade que a frase exemplo tem a plavra "palavra" começando na posição 35: ' + $texto1.startsWith("palavra", 34);
+
+    $lugar = "t21-p3-startswith";
+    display($lugar, $texto);
+}
+
+function t21p4locate() {
+
+    let $lugar = "t21-p0-locate";
+    let $texto1 = document.getElementById($lugar).innerHTML;
+    let $texto = 'É verdade que a frase exemplo tem a plavra "Exemplo" terminando na posição 7: ' + $texto1.endsWith("Exemplo", 7);
+
+    $lugar = "t21-p4-endswith";
+    display($lugar, $texto);
 }
 
 // function () {

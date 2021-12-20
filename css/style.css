@@ -103,3 +103,7 @@ div.vertical-space {
 .space {
     margin: 10px;
 }
+
+.estilo-lista {
+    list-style-position: inside;
+}
