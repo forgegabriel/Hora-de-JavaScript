@@ -218,7 +218,7 @@
                 $lugar = "t22-p1-array-for-each";
                 const $paises = ["Argentina", "Uruguai", "Brasil", "Chile", "Paraguai"];
 
-                $texto = "<ol class=\"estilo-lista\">";
+                $texto = '<ol class="estilo-lista">';
                 $paises.forEach(constroiLista);
                 $texto += "</ol>"
 
@@ -229,6 +229,149 @@
                 }
             </script>
         </div>
+        <div class="container">
+            <h2>23. Convertendo array</h2>
+            <div>
+                <h3>toString()</h3>
+                <p id="t23-p1-convertendo"></p>
+                <script>t23p1convertendo()</script>
+                <br>
+            </div>
+            <div>
+                <h3>join()</h3>
+                <p id="t23-p2-convertendo"></p>
+                <script>t23p2convertendo()</script>
+                <br>
+            </div>
+        </div>
+        <div class="container">
+            <h2>24. Tirando e adicionando elementos ao fim de um array</h2>
+            <div>
+                <h3>pop()</h3>
+                <p id="t24-p1-removendo"></p>
+                <script>t24p1removendo()</script>
+                <br>
+            </div>
+            <div>
+                <h3>push()</h3>
+                <p id="t24-p2-adicionando"></p>
+                <script>t24p2adicionando()</script>
+                <br>
+            </div>
+        </div>
+        <div class="container">
+            <h2>25. Tirando e adicionando elementos ao início de um array</h2>
+            <div>
+                <h3>shift()</h3>
+                <p id="t25-p1-removendo"></p>
+                <script>t25p1removendo()</script>
+                <br>
+            </div>
+            <div>
+                <h3>unshift()</h3>
+                <p id="t25-p2-adicionando"></p>
+                <script>t25p2adicionando()</script>
+                <br>
+            </div>
+        </div>
+        <div class="container">
+            <h2>26. Método splice()</h2>
+            <p id="t26-p1-splice"></p>
+            <script>t26p1splice()</script>
+        </div>
+        <div class="container">
+            <h2>27. Slice()</h2>
+            <p id="t27-p1-slice"></p>
+            <script>t27p1slice()</script>
+        </div>
+        <div class="container">
+            <h2>28. Organizando uma array</h2>
+            <p id="t28-p1-sorting"></p>
+            <script>t28p1sorting()</script>
+        </div>
+        <div class="container">
+            <h2>29. Organizando uma array com números</h2>
+            <p id="t29-p1-sorting"></p>
+            <script>t29p1sorting()</script>
+        </div>
+        <div class="container">
+            <h2>30. Arrow function</h2>
+            <p id="t30-p1-arrow-function"></p>
+            <button id="t30-p1-button">Aperte</button>
+            <script>
+                const t30p1teste = () => {
+                    document.getElementById("t30-p1-arrow-function").innerHTML +=
+                        this;
+                };
+                window.addEventListener("load", t30p1teste);
+                document.getElementById("t30-p1-button").addEventListener("click", t30p1teste);
+            </script>
+        </div>
+        <div class="container">
+            <h2>31. Matematicas</h2>
+            <p id="t31-p1-matematica">3.48</p>
+            <p id="t31-p2-matematica">3.48</p>
+            <p id="t31-p3-matematica">3.48</p>
+            <p id="t31-p4-matematica">3.48</p>
+            <p id="t31-p5-matematica">3.48</p>
+            <script>
+                {
+                    let $par = document.getElementById("t31-p1-matematica").innerHTML;
+                    $par += " = " + Math.round($par);
+                    document.getElementById("t31-p1-matematica").innerHTML = $par;
+                }
+                {
+                    let $par = document.getElementById("t31-p2-matematica").innerHTML;
+                    $par += " = " + Math.ceil($par);
+                    document.getElementById("t31-p2-matematica").innerHTML = $par;
+                }
+                {
+                    let $par = document.getElementById("t31-p3-matematica").innerHTML;
+                    $par += " = " + Math.floor($par);
+                    document.getElementById("t31-p3-matematica").innerHTML = $par;
+                }
+                {
+                    let $par = document.getElementById("t31-p4-matematica").innerHTML;
+                    $par += " = " + Math.trunc($par);
+                    document.getElementById("t31-p4-matematica").innerHTML = $par;
+                }
+                {
+                    let $par = document.getElementById("t31-p5-matematica").innerHTML;
+                    $par += " = " + Math.sign($par);
+                    document.getElementById("t31-p5-matematica").innerHTML = $par;
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>32. Número aleartório</h2>
+            <p id="t32-p1-aleartorio">Cria um número aleartório entre 75 e 140</p>
+            <button onclick="t32p1aleartorio()">Aperte</button>
+            <script>
+                function t32p1aleartorio() {
+                    document.getElementById("t32-p1-aleartorio").innerHTML = numAleartorio(75, 140);
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>33. Idade para votar</h2>
+            <p>Qual a sua idade?</p>
+            <div>
+                <input id="t33-p1-idade">
+                <button onclick="t33p1votar()">Checar</button>
+            </div>
+            <p id="t33-p1-votar"></p>
+            <script>
+                function t33p1votar() {
+                    let $num = document.getElementById("t33-p1-idade").value;
+                    document.getElementById("t33-p1-votar").innerHTML = PodeVotar($num);
+                }
+            </script>
+        </div>
+        <!-- <div class="container">
+            <h2></h2>
+            <p id=""></p>
+            <script>()</script>
+        </div> -->
     </main>
 
     <footer>

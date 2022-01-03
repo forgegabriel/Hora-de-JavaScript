@@ -246,6 +246,119 @@ function t21p4locate() {
     display($lugar, $texto);
 }
 
+function t23p1convertendo() {
+
+    let $lugar = "t23-p1-convertendo";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto = $array + "<br>" + $array.toString();
+
+    display($lugar, $texto);
+}
+
+function t23p2convertendo() {
+
+    let $lugar = "t23-p2-convertendo";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto = $array + "<br>" + $array.join("<br>");
+
+    display($lugar, $texto);
+}
+
+
+function t24p1removendo() {
+
+    let $lugar = "t24-p1-removendo";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto1 = $array + "<br>" + $array.pop();
+    let $texto = $texto1 + "<br>" + $array;
+
+    display($lugar, $texto);
+}
+
+
+function t24p2adicionando() {
+
+    let $lugar = "t24-p2-adicionando";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto1 = $array + "<br>" + $array.push("açúcar-mascavo");
+    let $texto = $texto1 + "<br>" + $array;
+
+    display($lugar, $texto);
+}
+
+function t25p1removendo() {
+
+    let $lugar = "t25-p1-removendo";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto1 = $array + "<br>" + $array.shift();
+    let $texto = $texto1 + "<br>" + $array;
+
+    display($lugar, $texto);
+}
+
+
+function t25p2adicionando() {
+
+    let $lugar = "t25-p2-adicionando";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto1 = $array + "<br>" + $array.unshift("açúcar-mascavo");
+    let $texto = $texto1 + "<br>" + $array;
+
+    display($lugar, $texto);
+}
+
+function t26p1splice() {
+
+    let $lugar = "t26-p1-splice";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto1 = $array + "<br>" + $array.splice(2, 1, "açúcar-mascavo");
+    let $texto = $texto1 + "<br>" + $array;
+
+    display($lugar, $texto);
+}
+
+function t27p1slice() {
+
+    let $lugar = "t27-p1-slice";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude"];
+    let $texto = $array + "<br>" + $array.slice(1) + "<br>" + $array.slice(0, 3);
+
+    display($lugar, $texto);
+}
+
+function t28p1sorting() {
+
+    let $lugar = "t28-p1-sorting";
+    let $array = ["coisas", "Biscoito", "bolacha", "Bola de gude", "açúcar-mascavo"];
+    let $texto = $array + "<br>" + $array.sort();
+
+    display($lugar, $texto);
+}
+
+function t29p1sorting() {
+
+    let $lugar = "t29-p1-sorting";
+    let $array = [14, 8, 144, -9, 34];
+    let $texto = $array + "<br>" + $array.sort() + "<br>"
+        + $array.sort(function (a, b) { return a - b });
+
+    display($lugar, $texto);
+}
+
+function numAleartorio(min, max) {
+
+    return Math.round(Math.random() * (max - min)) + min;
+}
+
+function PodeVotar($idade) {
+    if (isNaN($idade) || $idade < 0) {
+        return "Você deve fornescer um número válido"
+    } else {
+        let $permissao = ($idade < 18) ? "Muito novo" : "Idade suficiente";
+        return $permissao + " para votar.";
+    }
+}
+
 // function () {
 
 //     let $lugar = "";
