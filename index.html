@@ -391,10 +391,60 @@
                 document.getElementById("t34-p1-paragrafo").innerHTML = $t34p1text;
             </script>
         </div>
+        <div class="container">
+            <h2>35. Set</h2>
+            <p id="t35-p1-sets"></p>
+            <script>
+                {
+                    let $letras = new Set(["a", "b", "c"]);
+                    let $texto = "";
+                    $texto += "A array tem " + $letras.size + " itens.<br>"
+                    $letras.add("f");
+                    $letras.add("b");
+                    $letras.add("c");
+                    $letras.add("g");
+                    $letras.delete("b");
+                    for (let x of $letras.values()) {
+                        $texto += x + "<br>";
+                    }
+                    $texto += "A array tem " + $letras.size + " itens.<br>"
+                    document.getElementById("t35-p1-sets").innerHTML = $texto;
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>36. Map</h2>
+            <p id="t36-p1-maps"></p>
+            <script>
+                {
+                    let $texto = "";
+                    const $objetos = new Map([
+                        ["apples", 500],
+                        ["bananas", 300],
+                        ["oranges", 200]
+                    ]);
+                    $texto += $objetos.get("bananas") + "<br>";
+                    $objetos.set("bananas", 400);
+                    $objetos.set("pineapple", 300);
+                    $texto += $objetos.get("bananas") + "<br>";
+                    $objetos.delete("bananas");
+                    $texto += $objetos.has("bananas") + "<br>";
+                    $objetos.forEach(function (x, y) {
+                        $texto += y + " = " + x + "<br>";
+                    });
+                    document.getElementById("t36-p1-maps").innerHTML = $texto;
+                }
+            </script>
+        </div>
         <!-- <div class="container">
             <h2></h2>
             <p id=""></p>
-            <script>()</script>
+            <script>
+                {
+                    let $texto = "";
+                    document.getElementById("").innerHTML = $texto; 
+                }
+            </script>
         </div> -->
     </main>
 
