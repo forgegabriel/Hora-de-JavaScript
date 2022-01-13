@@ -148,38 +148,38 @@
             <p id="t19-p1-contador">Número:</p>
             <script>
 
-                var $t19p1contador = { num: 10 };
+                var t19p1contador = { num: 10 };
 
-                Object.defineProperty($t19p1contador, "resetar", {
+                Object.defineProperty(t19p1contador, "resetar", {
                     get: function () { this.num = 0; }
                 });
-                Object.defineProperty($t19p1contador, "adicionar", {
+                Object.defineProperty(t19p1contador, "adicionar", {
                     get: function () { this.num++; }
                 });
-                Object.defineProperty($t19p1contador, "reduzir", {
+                Object.defineProperty(t19p1contador, "reduzir", {
                     get: function () { this.num--; }
                 });
 
-                var $lugar = "t19-p1-contador";
-                var $texto = document.getElementById($lugar).innerHTML;
-                display($lugar, $texto + " " + $t19p1contador.num);
+                var lugar = "t19-p1-contador";
+                var texto = document.getElementById(lugar).innerHTML;
+                display(lugar, texto + " " + t19p1contador.num);
 
                 function t19p1resetar() {
 
-                    $t19p1contador.resetar;
-                    display($lugar, $texto + " " + $t19p1contador.num);
+                    t19p1contador.resetar;
+                    display(lugar, texto + " " + t19p1contador.num);
                 }
 
                 function t19p2adiciona1() {
 
-                    $t19p1contador.adicionar;
-                    display($lugar, $texto + " " + $t19p1contador.num);
+                    t19p1contador.adicionar;
+                    display(lugar, texto + " " + t19p1contador.num);
                 }
 
                 function t19p3reduz1() {
 
-                    $t19p1contador.reduzir;
-                    display($lugar, $texto + " " + $t19p1contador.num);
+                    t19p1contador.reduzir;
+                    display(lugar, texto + " " + t19p1contador.num);
                 }
 
             </script>
@@ -215,17 +215,17 @@
             <p id="t22-p1-array-for-each"></p>
             <script>
 
-                $lugar = "t22-p1-array-for-each";
-                const $paises = ["Argentina", "Uruguai", "Brasil", "Chile", "Paraguai"];
+                lugar = "t22-p1-array-for-each";
+                const paises = ["Argentina", "Uruguai", "Brasil", "Chile", "Paraguai"];
 
-                $texto = '<ol class="estilo-lista">';
-                $paises.forEach(constroiLista);
-                $texto += "</ol>"
+                texto = '<ol class="estilo-lista">';
+                paises.forEach(constroiLista);
+                texto += "</ol>"
 
-                display($lugar, $texto);
+                display(lugar, texto);
 
                 function constroiLista(string) {
-                    $texto += "<li>" + string + "</li>";
+                    texto += "<li>" + string + "</li>";
                 }
             </script>
         </div>
@@ -316,29 +316,29 @@
             <p id="t31-p5-matematica">3.48</p>
             <script>
                 {
-                    let $par = document.getElementById("t31-p1-matematica").innerHTML;
-                    $par += " = " + Math.round($par);
-                    document.getElementById("t31-p1-matematica").innerHTML = $par;
+                    let par = document.getElementById("t31-p1-matematica").innerHTML;
+                    par += " = " + Math.round(par);
+                    document.getElementById("t31-p1-matematica").innerHTML = par;
                 }
                 {
-                    let $par = document.getElementById("t31-p2-matematica").innerHTML;
-                    $par += " = " + Math.ceil($par);
-                    document.getElementById("t31-p2-matematica").innerHTML = $par;
+                    let par = document.getElementById("t31-p2-matematica").innerHTML;
+                    par += " = " + Math.ceil(par);
+                    document.getElementById("t31-p2-matematica").innerHTML = par;
                 }
                 {
-                    let $par = document.getElementById("t31-p3-matematica").innerHTML;
-                    $par += " = " + Math.floor($par);
-                    document.getElementById("t31-p3-matematica").innerHTML = $par;
+                    let par = document.getElementById("t31-p3-matematica").innerHTML;
+                    par += " = " + Math.floor(par);
+                    document.getElementById("t31-p3-matematica").innerHTML = par;
                 }
                 {
-                    let $par = document.getElementById("t31-p4-matematica").innerHTML;
-                    $par += " = " + Math.trunc($par);
-                    document.getElementById("t31-p4-matematica").innerHTML = $par;
+                    let par = document.getElementById("t31-p4-matematica").innerHTML;
+                    par += " = " + Math.trunc(par);
+                    document.getElementById("t31-p4-matematica").innerHTML = par;
                 }
                 {
-                    let $par = document.getElementById("t31-p5-matematica").innerHTML;
-                    $par += " = " + Math.sign($par);
-                    document.getElementById("t31-p5-matematica").innerHTML = $par;
+                    let par = document.getElementById("t31-p5-matematica").innerHTML;
+                    par += " = " + Math.sign(par);
+                    document.getElementById("t31-p5-matematica").innerHTML = par;
                 }
             </script>
         </div>
@@ -362,8 +362,8 @@
             <p id="t33-p1-votar"></p>
             <script>
                 function t33p1votar() {
-                    let $num = document.getElementById("t33-p1-idade").value;
-                    document.getElementById("t33-p1-votar").innerHTML = PodeVotar($num);
+                    let num = document.getElementById("t33-p1-idade").value;
+                    document.getElementById("t33-p1-votar").innerHTML = PodeVotar(num);
                 }
             </script>
         </div>
@@ -371,24 +371,24 @@
             <h2>34. Label, continue e break</h2>
             <p id="t34-p1-paragrafo"></p>
             <script>
-                const $t34p1nums = ["1", "2"];
+                const t34p1nums = ["1", "2"];
                 for (let i = 3; i < 8; i++) {
                     if (i === 4 || i === "5") continue;
-                    $t34p1nums.push(i.toString());
+                    t34p1nums.push(i.toString());
                 }
-                let $t34p1text = "";
+                let t34p1text = "";
                 listaDeNumeros: {
-                    $t34p1text += $t34p1nums[0] + "<br>";
-                    $t34p1text += $t34p1nums[1] + "<br>";
-                    $t34p1text += $t34p1nums[2] + "<br>";
-                    $t34p1text += $t34p1nums[3] + "<br>";
-                    $t34p1text += $t34p1nums[4] + "<br>";
+                    t34p1text += t34p1nums[0] + "<br>";
+                    t34p1text += t34p1nums[1] + "<br>";
+                    t34p1text += t34p1nums[2] + "<br>";
+                    t34p1text += t34p1nums[3] + "<br>";
+                    t34p1text += t34p1nums[4] + "<br>";
                     break listaDeNumeros;
-                    $t34p1text += $t34p1nums[5] + "<br>";
-                    $t34p1text += $t34p1nums[6] + "<br>";
-                    $t34p1text += $t34p1nums[7] + "<br>";
+                    t34p1text += t34p1nums[5] + "<br>";
+                    t34p1text += t34p1nums[6] + "<br>";
+                    t34p1text += t34p1nums[7] + "<br>";
                 }
-                document.getElementById("t34-p1-paragrafo").innerHTML = $t34p1text;
+                document.getElementById("t34-p1-paragrafo").innerHTML = t34p1text;
             </script>
         </div>
         <div class="container">
@@ -396,19 +396,19 @@
             <p id="t35-p1-sets"></p>
             <script>
                 {
-                    let $letras = new Set(["a", "b", "c"]);
-                    let $texto = "";
-                    $texto += "A array tem " + $letras.size + " itens.<br>"
-                    $letras.add("f");
-                    $letras.add("b");
-                    $letras.add("c");
-                    $letras.add("g");
-                    $letras.delete("b");
-                    for (let x of $letras.values()) {
-                        $texto += x + "<br>";
+                    let letras = new Set(["a", "b", "c"]);
+                    let texto = "";
+                    texto += "A array tem " + letras.size + " itens.<br>"
+                    letras.add("f");
+                    letras.add("b");
+                    letras.add("c");
+                    letras.add("g");
+                    letras.delete("b");
+                    for (let x of letras.values()) {
+                        texto += x + "<br>";
                     }
-                    $texto += "A array tem " + $letras.size + " itens.<br>"
-                    document.getElementById("t35-p1-sets").innerHTML = $texto;
+                    texto += "A array tem " + letras.size + " itens.<br>"
+                    document.getElementById("t35-p1-sets").innerHTML = texto;
                 }
             </script>
         </div>
@@ -417,22 +417,54 @@
             <p id="t36-p1-maps"></p>
             <script>
                 {
-                    let $texto = "";
-                    const $objetos = new Map([
+                    let texto = "";
+                    const objetos = new Map([
                         ["apples", 500],
                         ["bananas", 300],
                         ["oranges", 200]
                     ]);
-                    $texto += $objetos.get("bananas") + "<br>";
-                    $objetos.set("bananas", 400);
-                    $objetos.set("pineapple", 300);
-                    $texto += $objetos.get("bananas") + "<br>";
-                    $objetos.delete("bananas");
-                    $texto += $objetos.has("bananas") + "<br>";
-                    $objetos.forEach(function (x, y) {
-                        $texto += y + " = " + x + "<br>";
+                    texto += objetos.get("bananas") + "<br>";
+                    objetos.set("bananas", 400);
+                    objetos.set("pineapple", 300);
+                    texto += objetos.get("bananas") + "<br>";
+                    objetos.delete("bananas");
+                    texto += objetos.has("bananas") + "<br>";
+                    objetos.forEach(function (x, y) {
+                        texto += y + " = " + x + "<br>";
                     });
-                    document.getElementById("t36-p1-maps").innerHTML = $texto;
+                    document.getElementById("t36-p1-maps").innerHTML = texto;
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>37. Classes</h2>
+            <p id="t37-p1-classes"></p>
+            <script>
+                {
+                    class Games {
+                        constructor(name, year, month, day, review) {
+                            this.name = name;
+                            this.date = new Date(year, month, day);
+                            this.review = review;
+                        }
+                        releaseDate() {
+                            const data = [this.date.getDate(), this.date.getMonth(), this.date.getFullYear()];
+                            for (let i = 0; i < 2; i++) {
+                                if (data[i] < 10) {
+                                    data[i].toString();
+                                    data[i] = "0" + data[i];
+                                }
+                            }
+                            return data[0] + "/" + data[1] + "/" + data[2];
+                        }
+                    }
+                    const jogo1 = new Games("The Witcher 3", "2015", "4", "18", "overwhelmingly positive");
+                    const jogo2 = new Games("Horizon Zero Dawn", "2020", "7", "7", "very positive");
+
+                    let texto = "O jogo " + jogo1.name + " foi lançado dia " + jogo1.releaseDate() + ".<br>" +
+                        "O jogo " + jogo2.name + " foi lançado dia " + jogo2.releaseDate() + ".";
+                    let elemento = document.getElementById("t37-p1-classes");
+                    elemento.innerHTML = texto;
                 }
             </script>
         </div>
@@ -441,8 +473,9 @@
             <p id=""></p>
             <script>
                 {
-                    let $texto = "";
-                    document.getElementById("").innerHTML = $texto; 
+                    let texto = "";
+                    let elemento = document.getElementById("");
+                    elemento.innerHTML = texto; 
                 }
             </script>
         </div> -->
