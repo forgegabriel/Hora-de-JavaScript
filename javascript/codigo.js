@@ -360,7 +360,6 @@ function PodeVotar(idade) {
         return permissao + " para votar.";
     }
 }
-
 // function () {
 
 //     let lugar = "";

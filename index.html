@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/minireset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="javascript/codigo.js"></script>
+    <script src="index.ts"></script>
 </head>
 
 <body onload="t20p1eventoJS()">
@@ -468,6 +469,79 @@
                 }
             </script>
         </div>
+        <div class="container">
+            <h2>38. Rest and Spread</h2>
+            <p id="t38-p1-rest-and-spread"></p>
+            <script>
+                {
+                    //rest
+                    const arr = ["12", "34"];
+                    const arr2 = [/*...*/arr, "4", "5"];
+                    const arr3 = [...arr2, "7", "9"];
+                    let textArr = "";
+                    arr3.forEach((value) => textArr += value + " ");
+
+                    //spread
+                    const frutas = ["melancia", "banana", "abacaxi", "maçã"];
+                    let [fruta1, fruta2, fruta3, fruta4] = frutas;
+                    let frutasText = `${fruta1} ${fruta2} ${fruta3} ${fruta4}`;
+
+                    const obj = {
+                        fruta: "maçã",
+                        tipo: "fruta"
+                    }
+                    let { fruta: FrutaBoa, tipo } = obj;
+
+                    function sum([a, b] = [0, 0]) {
+                        return a + b;
+                    }
+                    let texto = textArr + "<br>" + frutasText + "<br>" + sum([5, 3]);
+                    let elemento = document.getElementById("t38-p1-rest-and-spread");
+                    elemento.innerHTML = texto;
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>39. callback and promises</h2>
+            <p id="t39-p1-callback"></p>
+            <p id="t39-p2-relogio"></p>
+            <script>
+                {
+                    function doSomething(a, b = 0) {
+                        return a + b;
+                    }
+
+                    function t39p1mostra(texto) {
+                        let element = document.getElementById("t39-p1-callback");
+                        let oldText = element.innerHTML;
+                        element.innerHTML = texto;
+                    }
+                    t39p1mostra(doSomething(4, 5));
+
+                    function relogio() {
+                        let time = new Date();
+                        let relogio = time.getHours() + ":"
+                            + time.getMinutes() + ":"
+                            + time.getSeconds();
+                        display("t39-p2-relogio", relogio);
+                    }
+
+                    setInterval(relogio, 1000);
+
+                }
+            </script>
+        </div>
+        <div class="container">
+            <h2>40. Usando TypeScript</h2>
+            <p id="t40-p1-typeScript"></p>
+            <script>
+                {
+                    let texto = soma(2, 3);
+                    let elemento = document.getElementById("t40-p1-typeScript");
+                    elemento.innerHTML = texto;
+                }
+            </script>
+        </div>
         <!-- <div class="container">
             <h2></h2>
             <p id=""></p>
@@ -479,6 +553,9 @@
                 }
             </script>
         </div> -->
+        <script>
+
+        </script>
     </main>
 
     <footer>
