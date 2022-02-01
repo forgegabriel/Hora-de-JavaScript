@@ -12,7 +12,6 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/minireset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="./javascript/codigo.js"></script>
     <script src="./index.ts"></script>
 </head>
 
@@ -316,21 +315,22 @@
             <p id="t31-p4-matematica">3.48</p>
             <p id="t31-p5-matematica">3.48</p>
             <script>
-                {
+                //funções auto chamadas
+                (function() {
                     let par = document.getElementById("t31-p1-matematica").innerHTML;
                     par += " = " + Math.round(par);
                     document.getElementById("t31-p1-matematica").innerHTML = par;
-                }
-                {
+                })();
+                (function() {
                     let par = document.getElementById("t31-p2-matematica").innerHTML;
                     par += " = " + Math.ceil(par);
                     document.getElementById("t31-p2-matematica").innerHTML = par;
-                }
-                {
+                }());
+                (() => {
                     let par = document.getElementById("t31-p3-matematica").innerHTML;
                     par += " = " + Math.floor(par);
                     document.getElementById("t31-p3-matematica").innerHTML = par;
-                }
+                })();
                 {
                     let par = document.getElementById("t31-p4-matematica").innerHTML;
                     par += " = " + Math.trunc(par);
@@ -551,6 +551,7 @@
 
     </footer>
 
+    <script src="./javascript/codigo.js"></script>
 </body>
 
 </html>
